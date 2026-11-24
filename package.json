@@ -1,0 +1,20 @@
+{
+  "name": "saju-ziwei-calc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "사주(manseryeok)·자미두수(iztro) 로컬 계산 CLI. LLM은 계산하지 않음.",
+  "scripts": {
+    "saju": "node scripts/saju-calc.mjs",
+    "ziwei": "node scripts/ziwei-calc.mjs",
+    "test": "node test/golden.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "iztro": "^2.6.5",
+    "lunar-lite": "^0.2.9",
+    "manseryeok": "^2.0.0"
+  }
+}

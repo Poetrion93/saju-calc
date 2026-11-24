@@ -1,0 +1,4 @@
+node_modules/
+.venv/
+results/*.tmp
+.DS_Store
