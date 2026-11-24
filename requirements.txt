@@ -1,0 +1,2 @@
+korean-lunar-calendar==0.4.0
+korean-saju==0.3.0
