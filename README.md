@@ -44,4 +44,4 @@ npm test
 
 ## 해석 품질 예시
 
-그록봇으로 2027 행동 가이드를 풀어 쓸 때 쓰는 구성·말투 기준은 `examples/`에 있다. 가상 인물 홍길동 긴 샘플과 용어·추천 3단 검수 스크립트(`scripts/check-bare-terms-v2.py`, `scripts/check-recommend-triple.py`)를 포함한다. 개인 생년월일은 넣지 마세요.
+그록봇으로 2027 행동 가이드를 풀어 쓸 때 쓰는 구성·말투 기준은 `examples/`에 있다. 가상 인물 홍길동 긴 샘플과 용어·추천 3단 검수 스크립트(`scripts/check-bare-terms-v2.py`, `scripts/check-recommend-triple-v2.py`(구조 확인; 옛 키워드 검사 `scripts/check-recommend-triple.py`는 참고용))를 포함한다. 개인 생년월일은 넣지 마세요.
