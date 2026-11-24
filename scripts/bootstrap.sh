@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install or reuse ~/saju-calc (override with SAJU_CALC_HOME). Prints the install dir.
+# Install or reuse ~/saju-calc (override with SAJU_CALC_HOME). Prints only the install dir on stdout.
 set -euo pipefail
 REPO_URL="${SAJU_CALC_REPO:-https://github.com/Poetrion93/saju-calc.git}"
 ARCHIVE_URL="${SAJU_CALC_ARCHIVE:-https://github.com/Poetrion93/saju-calc/archive/refs/heads/main.tar.gz}"
@@ -32,6 +32,8 @@ if ! is_ready "$DIR"; then
   fi
   mkdir -p "$DIR"
   cp -R "$tmp/src/." "$DIR/"
+  trap - EXIT
+  rm -rf "$tmp"
 fi
 
 cd "$DIR"
@@ -40,6 +42,6 @@ if [[ ! -d node_modules/manseryeok || ! -d node_modules/iztro ]]; then
     echo "npm(Node 18+)이 필요해." >&2
     exit 1
   fi
-  npm install --omit=dev
+  npm install --omit=dev --silent >&2
 fi
 printf '%s\n' "$DIR"
